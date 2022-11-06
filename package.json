@@ -4,11 +4,34 @@
         "dev": "vite",
         "build": "vite build"
     },
+    "main": "gulpfile.js",
+    "dependencies": {
+        "async": "^3.1.0",
+        "bootstrap": "~5.1.0",
+        "gulp-cli": "^2.2.0",
+        "gulp-concat": "^2.6.1"
+    },
     "devDependencies": {
-        "axios": "^1.1.2",
-        "laravel-vite-plugin": "^0.6.0",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14",
-        "vite": "^3.0.0"
+        "gulp": "4.0.2",
+        "gulp-util": "~3.0.8",
+        "gulp-autoprefixer": "~7.0.0",
+        "gulp-clean": "~0.4.0",
+        "gulp-copy": "~4.0.1",
+        "gulp-csscomb": "~3.0.8",
+        "gulp-cssmin": "~0.2.0",
+        "gulp-multistream": "~0.1.2",
+        "gulp-notify": "~3.0.0",
+        "gulp-plumber": "~1.1.0",
+        "gulp-rename": "~1.2.2",
+        "gulp-replace": "~1.0.0",
+        "gulp-rtlcss": "^1.4.0",
+        "gulp-require-tasks": "~1.2.1",
+        "gulp-sass": "~4.0.2",
+        "gulp-sequence": "~1.0.0",
+        "gulp-uglify": "~3.0.0",
+        "gulp-terser": "^1.4.0",
+        "gulp-watch": "~5.0.1",
+        "merge-stream": "~2.0.0",
+        "minimist": "~1.2.0"
     }
 }
