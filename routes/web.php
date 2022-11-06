@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\LoginController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +18,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::middleware('guest')->group(fn () =>
+    Route::prefix('/login')->controller(LoginController::class)->group(function () {
+        Route::get('/', 'create')->name('login');
+        Route::post('/', 'store');
+    })
+);
+
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [LoginController::class, 'user']);
+    Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
+});
+
